@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy-gh-pages": "npm run build && npx rimraf gh-pages && mkdir gh-pages && cp -r dist/* gh-pages && git add gh-pages && git commit -m 'Deploy to gh-pages' && git subtree push --prefix gh-pages origin gh-pages",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
